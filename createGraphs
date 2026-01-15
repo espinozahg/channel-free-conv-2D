@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# chmod ug+rwx createGraphs
+# echo $SHELL 
+
+# EXECUTE USING:
+# bash createGraphs
+
+gnuplot -c temperatureProfile.gp
+gnuplot -c velocityProfile.gp
+gnuplot -c pressureProfile.gp
+#gnuplot -c uxProfile.gp
+gnuplot -c velocityProfileComp.gp
+
+
+gnuplot -c uyAxial.gp
+gnuplot -c prghAxial.gp
+gnuplot -c TAxial.gp
+gnuplot -c pAxial.gp
+
+#./inkscape.sh
+#bash ./inkscape.sh

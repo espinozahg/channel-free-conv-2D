@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# source /opt/openfoam12/etc/bashrc
+# export LIBGL_ALWAYS_SOFTWARE=1
+
+cd ${0%/*} || exit 1    # Run from this directory # hotRoomBoussinesqSteady, hotRadiationRoom
+
+# Source tutorial run functions # hotRoomBoussinesqSteady, hotRadiationRoom
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# hotRoomBoussinesqSteady, hotRadiationRoom
+application=$(getApplication)
+
+# hotRoomBoussinesqSteady, hotRadiationRoom
+runApplication blockMesh
+runApplication $application
+
+#------------------------------------------------------------------------------

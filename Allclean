@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# source /opt/openfoam12/etc/bashrc
+
+cd ${0%/*} || exit 1    # Run from this directory # hotRoomBoussinesqSteady, hotRadiationRoom
+
+# Source tutorial clean functions # hotRoomBoussinesqSteady, hotRadiationRoom
+. $WM_PROJECT_DIR/bin/tools/CleanFunctions
+
+# hotRoomBoussinesqSteady, hotRadiationRoom
+cleanCase
+
+#------------------------------------------------------------------------------
